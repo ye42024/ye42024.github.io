@@ -2,10 +2,12 @@
 <TITLE>Ye West 2024 #LoveSpeech</TITLE>
 <META NAME="description" CONTENT="I support Ye West for president of America. Love speech. Articles on a bunch of stuff.">
 <META NAME="viewport" CONTENT="width=device-width">
+<BASE ID="base">
 <STYLE>
 BODY {background:#cff url(gradient.png) repeat-x;}
 H2 {margin-bottom:10px;}
-HR{height:2px;border:0;background:linear-gradient(90deg, yellow,olive);}
+HR {height:2px;border:0;background:linear-gradient(90deg, yellow,olive);}
+TABLE,TD,TR,TBODY,IMG,BODY {max-width:100%;}
 </STYLE>	
 <BODY BGCOLOR="#ccffff" TEXT="black" LINK="maroon" VLINK="maroon" ALINK="red">
 <TABLE BGCOLOR="white" BORDER=1 ALIGN="center" WIDTH=90% BORDERCOLOR="#996633" CELLPADDING=5>
@@ -54,5 +56,48 @@ This website provides nothing but L<SMALL>OVE</SMALL> S<SMALL>PEECH</SMALL> and 
 </NAV>
 </TD></TR></TBODY></TABLE>
 
+<P ALIGN="center">Gather around the TV!</P>
+
+<TABLE CELLSPACING=0 CELLPADDING=0 ALIGN="center"><TBODY>
+<TR><TD COLSPAN=3><IMG SRC="tv/tvtop.jpg" WIDTH=942 HEIGHT=130 ALT=""></TD></TR>
+<TR><TD><IMG SRC="tv/tvleft.jpg" WIDTH=218 HEIGHT=436 ALT=""></TD>
+<TD WIDTH=515 HEIGHT=436 BGCOLOR="black" ID="screen"><IFRAME WIDTH=515 HEIGHT=436 FRAMEBORDER=0 NAME="tv" ID="tv"></IFRAME></TD>
+<TD><IMG SRC="tv/tvright.jpg" WIDTH=209 HEIGHT=436 ALT="" USEMAP="#buttons" BORDER=0>
+<MAP NAME="buttons"><AREA SHAPE="circle" COORDS="67,97,55" HREF="javascript:void(0);" ONCLICK="turnOnTV();return false;" ALT="Tuurn on/off"></MAP></TD></TR>
+<TR><TD COLSPAN=3><IMG SRC="tv/tvbottom.jpg" WIDTH=942 HEIGHT=154 ALT=""></TD></TR>
+</TBODY></TABLE>
+
+<BR>
+<TABLE FRAME="box" BGCOLOR="white" CELLPADDING=10 WIDTH=300 STYLE="max-width:100%"><TBODY><TR><TD>
+<FONT FACE="sans-serif">
+
+<H2 ALIGN="center">TV Usage Manual</H2>
+<UL>
+<LI>Turn on the TV by pressing the largest button.
+<LI>Click the links.
+<LI>Enjoy your TV!
+<LI>To stop watching TV, press the largest button again. Then you
+can click the links normally.
+</UL>
+
+<P ALIGN="center"><STRONG>NO REFUNDS!</STRONG></P>
+
+</TD></TR></TBODY></TABLE>
+
+<SCRIPT>
+var b = false;
+function turnOnTV() {
+  console.log("function called");
+  b = !b;
+  if (b) {
+    document.getElementById("base").target = "tv";
+    document.getElementById("screen").bgColor = "white";
+  } else {
+    document.getElementById("base").target = "";
+    document.getElementById("tv").src = "";
+    document.getElementById("screen").bgColor = "black";
+  }
+}
+</SCRIPT>
 </BODY>
 </HTML>
